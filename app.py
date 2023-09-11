@@ -5,7 +5,7 @@ import numpy as np
 st.set_page_config(page_icon="bar_chart",
                    page_title="Forbes 2022 Billionaire list Analysis",layout="wide",
                    initial_sidebar_state="collapsed")
-st.title("FORBES 2022 BILLIONAIRES LISTS")
+st.title("FORBES 2022 BILLIONAIRES LISTS ANALYSIS")
 df= pd.read_csv("forbes_2022_billionaires.csv")
 df["Networth"] = df["Networth"].apply(lambda x: float(x.split(" ")[0].replace("$"," ").strip()))
 df["Age"] = df["Age"].apply(lambda x:np.nan if x == 0 else x)
